@@ -1,0 +1,38 @@
+print("TNG API Load!")
+game.StarterGui:SetCore("SendNotification", {
+  Title = "TNG-Exploit",
+  Icon = "rbxassetid://13699229918",
+  Text = "Welcome To TNG"
+ })
+
+print("\r\n  _____ _   _  ____ \r\n |_   _| \\ | |/ ___|\r\n   | | |  \\| | |  _ \r\n   | | | |\\  | |_| |\r\n   |_| |_| \\_|\\____|\r\n")
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+local LocalPlayer = Players.LocalPlayer
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+
+-- Thiết lập ScreenGui
+ScreenGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
+
+-- Thiết lập Frame
+Frame.Size = UDim2.new(1, 0, 1, 0)
+Frame.BackgroundTransparency = 0.5
+Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame.Parent = ScreenGui
+
+-- Thiết lập TextLabel
+TextLabel.Size = UDim2.new(0.5, 0, 0.1, 0)
+TextLabel.Position = UDim2.new(0.25, 0, 0.45, 0)
+TextLabel.BackgroundTransparency = 1
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.Text = "Welcome To TNG "
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.TextScaled = true
+TextLabel.Parent = Frame
+
+-- Kết thúc chế độ full màn hình sau một khoảng thời gian
+wait(5) -- Để thông báo hiện trong 5 giây
+
+ScreenGui:Destroy()
